@@ -1,5 +1,8 @@
 package co.com.shapes;
 
+/**
+ * Entity that represents a point (x, y) in cartesian plane
+ */
 public class Point {
 
     private int x;

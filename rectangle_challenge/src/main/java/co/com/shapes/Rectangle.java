@@ -1,6 +1,10 @@
 package co.com.shapes;
 
-
+/**
+ * Entity that represents a Rectangle
+ * can be constructed providing bottom left points p1 (x, y) and top right points p2 (x, y)
+ * with those points top left p3 (x, y), and points  bottom right p4 (x, y) can be constructed
+ */
 public class Rectangle {
 
     private Point p1;

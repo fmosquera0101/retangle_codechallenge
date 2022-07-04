@@ -12,11 +12,6 @@ public class RectangleCalculationsTest {
 
     private RectangleCalculations rectangleCalculations = new RectangleCalculations();
 
-
-    // @Before
-    public void setUp() throws Exception {
-    }
-
    // @Test
     public void getIntersectionPoints() {
     }
@@ -36,7 +31,23 @@ public class RectangleCalculationsTest {
 
     }
 
-   // @Test
-    public void areAdjacent() {
+   @Test
+    public void areAdjacentSharingLefOrRightSide() {
+       Rectangle r1 = new Rectangle(new Point(1,2), new Point(4,5));
+       Rectangle r2 = new Rectangle(new Point(4,7),new Point(6, 7));
+       Assert.assertTrue(rectangleCalculations.areAdjacent(r1, r2));
+    }
+    @Test
+    public void areAdjacentSharingBottomOrUpperSide() {
+        Rectangle r1 = new Rectangle(new Point(1,4), new Point(5,8));
+        Rectangle r2 = new Rectangle(new Point(2,1),new Point(5, 4));
+        Assert.assertTrue(rectangleCalculations.areAdjacent(r1, r2));
+    }
+
+    @Test
+    public void areNotAdjacent() {
+        Rectangle r1 = new Rectangle(new Point(1,2), new Point(3,5));
+        Rectangle r2 = new Rectangle(new Point(4,7),new Point(6, 7));
+        Assert.assertFalse(rectangleCalculations.areAdjacent(r1, r2));
     }
 }
