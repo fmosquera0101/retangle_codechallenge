@@ -5,8 +5,8 @@ import co.com.shapes.Rectangle;
 
 public class RectangleCalculations {
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle(new Point(2,1),new Point(7, 7));
-        Rectangle r2 = new Rectangle(new Point(3,3), new Point(6,5));
+        Rectangle r1 = new Rectangle(new Point(3,3), new Point(6,5));
+        Rectangle r2 = new Rectangle(new Point(2,1),new Point(7, 7));
 
         System.out.println(r1);
         System.out.println(r2);
@@ -15,7 +15,7 @@ public class RectangleCalculations {
         Rectangle rectangleIntersect = rectang.getIntersectionPoints(r1, r2);
         System.out.println(rectangleIntersect);
         System.out.println("Are adjacent: "+rectang.areAdjacent(r1, r2));
-        System.out.println("R2 is contained in R1: "+rectang.isContained(r1, r2));
+        System.out.println("R1 is contained in R2: "+rectang.isContained(r1, r2));
 
     }
 
