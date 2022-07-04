@@ -12,8 +12,39 @@ public class RectangleCalculationsTest {
 
     private RectangleCalculations rectangleCalculations = new RectangleCalculations();
 
-   // @Test
-    public void getIntersectionPoints() {
+    @Test
+    public void intersectionPointsCase4InterceptionPoints() {
+        Rectangle r1 = new Rectangle(new Point(2,1), new Point(6,4));
+        Rectangle r2 = new Rectangle(new Point(3,1),new Point(5, 5));
+        Rectangle rectangleIntersection = rectangleCalculations.getIntersectionPoints(r1, r2);
+        Assert.assertTrue(rectangleIntersection.getArea() > 0);
+        Assert.assertTrue(rectangleIntersection.getP1().getX() == 3 && rectangleIntersection.getP1().getY() == 1);
+        Assert.assertTrue(rectangleIntersection.getP2().getX() == 5 && rectangleIntersection.getP2().getY() == 4);
+        Assert.assertTrue(rectangleIntersection.getP3().getX() == 3 && rectangleIntersection.getP3().getY() == 4);
+        Assert.assertTrue(rectangleIntersection.getP4().getX() == 5 && rectangleIntersection.getP4().getY() == 1);
+
+    }
+    @Test
+    public void intersectionPoints() {
+        Rectangle r1 = new Rectangle(new Point(2,2), new Point(7,6));
+        Rectangle r2 = new Rectangle(new Point(3,3),new Point(6, 8));
+        Rectangle rectangleIntersection = rectangleCalculations.getIntersectionPoints(r1, r2);
+        Assert.assertTrue(rectangleIntersection.getArea() > 0);
+        Assert.assertTrue(rectangleIntersection.getP1().getX() == 3 && rectangleIntersection.getP1().getY() == 3);
+        Assert.assertTrue(rectangleIntersection.getP2().getX() == 6 && rectangleIntersection.getP2().getY() == 6);
+
+    }
+
+
+    @Test
+    public void NotIntersectionPoints() {
+        Rectangle r1 = new Rectangle(new Point(2,2), new Point(7,6));
+        Rectangle r2 = new Rectangle(new Point(3,7),new Point(6, 8));
+        Rectangle rectangleIntersection = rectangleCalculations.getIntersectionPoints(r1, r2);
+        Assert.assertTrue(rectangleIntersection.getArea() == 0);
+        Assert.assertTrue(rectangleIntersection.getP1().getX() == 0 && rectangleIntersection.getP1().getY() == 0);
+        Assert.assertTrue(rectangleIntersection.getP2().getX() == 0 && rectangleIntersection.getP2().getY() == 0);
+
     }
 
     @Test
