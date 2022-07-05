@@ -6,8 +6,8 @@ import co.com.shapes.Rectangle;
 
 public class RectangleCalculations {
     public static void main(String[] args) {
-        Rectangle r1 = new Rectangle(new Point(1,2), new Point(4,4));
-        Rectangle r2 = new Rectangle(new Point(4,4),new Point(7, 8));
+        Rectangle r1 = new Rectangle(new Point(-4,1), new Point(-1,4));
+        Rectangle r2 = new Rectangle(new Point(-3,3),new Point(-2, 5));
 
         System.out.println(r1);
         System.out.println(r2);

@@ -25,6 +25,19 @@ public class RectangleCalculationsTest {
 
     }
     @Test
+    public void intersectionPointsNegativePoints() {
+        Rectangle r1 = new Rectangle(new Point(-4,1), new Point(-1,4));
+        Rectangle r2 = new Rectangle(new Point(-3,3),new Point(-2, 5));
+        Rectangle rectangleIntersection = rectangleCalculations.getIntersectionPoints(r1, r2);
+        Assert.assertTrue(rectangleIntersection.getArea() > 0);
+        Assert.assertTrue(rectangleIntersection.getP1().getX() == -3 && rectangleIntersection.getP1().getY() == 3);
+        Assert.assertTrue(rectangleIntersection.getP2().getX() == -2 && rectangleIntersection.getP2().getY() == 4);
+        Assert.assertTrue(rectangleIntersection.getP3().getX() == -3 && rectangleIntersection.getP3().getY() == 4);
+        Assert.assertTrue(rectangleIntersection.getP4().getX() == -2 && rectangleIntersection.getP4().getY() == 3);
+
+    }
+
+    @Test
     public void intersectionPoints() {
         Rectangle r1 = new Rectangle(new Point(2,2), new Point(7,6));
         Rectangle r2 = new Rectangle(new Point(3,3),new Point(6, 8));
@@ -37,7 +50,7 @@ public class RectangleCalculationsTest {
 
 
     @Test
-    public void NotIntersectionPoints() {
+    public void notIntersectionPoints() {
         Rectangle r1 = new Rectangle(new Point(2,2), new Point(7,6));
         Rectangle r2 = new Rectangle(new Point(3,7),new Point(6, 8));
         Rectangle rectangleIntersection = rectangleCalculations.getIntersectionPoints(r1, r2);
