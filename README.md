@@ -2,7 +2,9 @@
 This is a Maven Java 11 project that implement certain algorithms to calculate, interceptions points, contaiment and adjacency of tow rectangles.
 
 
-Rectangle is represented by the entity class Rectangle.java which contains a constructor to with tow params, point p1 which represents the bottom-left point (x, y) and p2 which represents the top-right point (x, y), with this tow points I construct the top-left point p3 and the bottom-right point p4
+Rectangle is represented by the entity class Rectangle.java which contains a constructor  with tow params:
+point p1 which represents the bottom-left point (x, y) and p2 which represents the top-right point (x, y)
+with this tow points I construct the top-left point p3 and the bottom-right point p4
 
 Considerations:
 I’m assuming that the rectangle constructed is parallel to the X line of Cartesian plane, which mean that for that this rectangle is not rotated.
