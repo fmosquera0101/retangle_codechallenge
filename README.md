@@ -20,10 +20,10 @@ public boolean isContained(Rectangle r1, Rectangle r2){}
 Return true or false if Rectangle R1 is fully contained in Rectangle R2
 
 
-public boolean areAdjacent(Rectangle r1, Rectangle r2)
+public boolean areAdjacent(Rectangle r1, Rectangle r2){}
 Return true or False if tow rectangles are adjacent, which is share one of its sides
 
 
 Unit Tests:
 We can find unit test in the RectangleCalculationTest.java which tests different test case scenario for every method described before.
-![image](https://user-images.githubusercontent.com/25505457/177424448-5b260400-cc88-439c-a816-75b94e041b42.png)
+
