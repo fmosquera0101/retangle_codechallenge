@@ -3,23 +3,10 @@ package co.com.calculations;
 import co.com.shapes.Point;
 import co.com.shapes.Rectangle;
 
-
+/**
+ * Class that contains the algorithms for exercise requested
+ */
 public class RectangleCalculations {
-    public static void main(String[] args) {
-        Rectangle r1 = new Rectangle(new Point(-4,1), new Point(-1,4));
-        Rectangle r2 = new Rectangle(new Point(-3,3),new Point(-2, 5));
-
-        System.out.println(r1);
-        System.out.println(r2);
-
-        RectangleCalculations rectang = new RectangleCalculations();
-        Rectangle rectangleIntersect = rectang.getIntersectionPoints(r1, r2);
-        System.out.println(rectangleIntersect);
-        System.out.println("Are adjacent: "+rectang.areAdjacent(r1, r2));
-        System.out.println("R1 is contained in R2: "+rectang.isContained(r1, r2));
-
-    }
-
     /**
      * Calculate te intersections points of two rectangles
      * return a Rectangle with area zero or point in (0,0) position if the rectangles don't overlap
